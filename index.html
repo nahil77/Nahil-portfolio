@@ -168,7 +168,7 @@
               <i class="fa-solid fa-location-dot f-30"></i>
               <div class="mng-l-15">
                 <h4>LOCATION:</h4>
-                <h5 class="cntct-f pb-5">THRISSUR.KERALA,INDIA</h5>
+                <h5 class="cntct-f pb-5">THRISSUR,KERALA,INDIA</h5>
               </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex ">
@@ -202,23 +202,27 @@
         <!--form starts here-->
         <div id="contact me" class="container mt-3 bg-colr-abt pt-5 box-shadow">
           <div class="row pb-5">
-            <form action="submit_form.contact" method="post">
-              <input type="text" id="name" name="name" maxlength="20" minlength="2" required
-                placeholder="Enter Your Full Name">
+            <form  method="post">
+         
+              <input type="text" id="name" name="name" required placeholder="Enter Your Full Name"  oninput="validateName()">
+              <span  id="nameError"></span>
+
+              <input type="tel" id="number" name="number" required placeholder=" Enter Your Number" oninput="validateNumber()">
+              <span  id="numberError"></span>
+
+              <input type="email" id="email" name="email" required placeholder=" Enter Your Email" oninput="validateEmail()">
+              <span  id="emailError"></span>            
+
+              <input type="text" id="subject" name="subject" required placeholder="Enter Your Subject" oninput="validateSubject()" >
+              <span id="subjectError"></span>
 
 
-              <input type="tel" id="number" name="number" required placeholder=" Enter Your Number">
-
-              <input type="email" id="email" name="email" required placeholder=" Enter Your Email">
-
-
-              <input type="text" id="subject" name="subject" required placeholder="Enter Your Subject">
-
-
-              <textarea id="message" name="message" rows="4" required placeholder="Enter Your Message"></textarea>
+              <textarea id="message" name="message" rows="4" required placeholder="Enter Your Message" oninput="validateMessage()"></textarea>
+              <span id="messageError"></span>
 
               <div class="submit-button mt-3">
-                <button type="submit">CONTACT ME</button>
+                <button  type="submit" id="submit" onclick="handleSubmit()">CONTACT ME</button>
+                <span id="submitError"></span>
               </div>
             </form>
           </div>
@@ -246,6 +250,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+
+  <script src="./script.js"></script>
 
 </body>
 <!--body ends here-->
