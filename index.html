@@ -203,25 +203,30 @@
         <div id="contact me" class="container mt-3 bg-colr-abt pt-5 box-shadow">
           <div class="row pb-5">
             <form action="submit.contact" method="post">
-         
-              <input type="text" id="name" name="name" required placeholder="Enter Your Full Name"  oninput="validateName()">
-              <span  id="nameError"></span>
 
-              <input type="tel" id="number" name="number" required placeholder=" Enter Your Number" oninput="validateNumber()">
-              <span  id="numberError"></span>
+              <input type="text" id="name" name="name" required placeholder="Enter Your Full Name"
+                oninput="validateName()">
+              <span id="nameError"></span>
 
-              <input type="email" id="email" name="email" required placeholder=" Enter Your Email" oninput="validateEmail()">
-              <span  id="emailError"></span>            
+              <input type="tel" id="number" name="number" required placeholder=" Enter Your Number"
+                oninput="validateNumber()">
+              <span id="numberError"></span>
 
-              <input type="text" id="subject" name="subject" required placeholder="Enter Your Subject" oninput="validateSubject()" >
+              <input type="email" id="email" name="email" required placeholder=" Enter Your Email"
+                oninput="validateEmail()">
+              <span id="emailError"></span>
+
+              <input type="text" id="subject" name="subject" required placeholder="Enter Your Subject"
+                oninput="validateSubject()">
               <span id="subjectError"></span>
 
 
-              <textarea id="message" name="message" rows="4" required placeholder="Enter Your Message" oninput="validateMessage()"></textarea>
+              <textarea id="message" name="message" rows="4" required placeholder="Enter Your Message"
+                oninput="validateMessage()"></textarea>
               <span id="messageError"></span>
 
               <div class="submit-button mt-3">
-                <button  type="submit" id="submit" onclick="handleSubmit()">CONTACT ME</button>
+                <button type="submit" id="submit" onclick="handleSubmit()">CONTACT ME</button>
                 <span id="submitError"></span>
               </div>
             </form>

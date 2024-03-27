@@ -136,7 +136,7 @@ function validateMessage() {
     const trimmedValue = message.value.trim();
     if (message.value.length < 3) {
         messageError.style.display = "block";
-        messageError.innerHTML = "Please Enter A Valid Message";
+        messageError.innerHTML = "Please Enter Your Message";
         messageError.style.color = "red";
         messageError.style.marginBottom = "10px";
         message.style.border = "5px solid red";
@@ -165,7 +165,7 @@ function handleSubmit() {
     if (!validateName() || !validateNumber() || !validateEmail() || !validateMessage()) {
         submitError.style.display = "block";
         submit.style.background = " Red"
-        submitError.innerHTML = "Please Fill The All fields";
+        submitError.innerHTML = "Please Fill In All fields";
         submitError.style.color = "red";
         submitError.style.marginTop = "10px";
 
